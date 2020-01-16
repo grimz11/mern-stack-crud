@@ -5,13 +5,18 @@ const router = express.Router();
 const User = require("../../models/User");
 
 router.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.header(
+    "Access-Control-Allow-Origin",
+    process.env.NODE_ENV === "production"
+      ? "https://morning-mountain-91801.herokuapp.com"
+      : "http://localhost:3000"
+  );
   res.header("Access-Control-Allow-Headers", "*");
   res.header("Access-Control-Allow-Methods", "*");
   res.header("Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
-
+``;
 //Get all the users
 router.get("/", (req, res) => {
   User.find()
