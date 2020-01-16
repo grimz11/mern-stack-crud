@@ -1,0 +1,3 @@
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/grimz11/mern-stack.git
