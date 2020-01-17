@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {deleteSinglePerson} from '../../redux/actions/personActions';
 import { Button, UncontrolledPopover, PopoverHeader, PopoverBody } from 'reactstrap';
+import Moment from 'react-moment';
 
 class Person extends PureComponent{
   state = {
@@ -44,7 +45,7 @@ class Person extends PureComponent{
             <ul className="list-group" key={item._id}>
             {/* <li className="list-group-item">Firstname: {item.firstName} </li> */}
               {/* <li className="list-group-item">Lastname: {item.lastName} </li> */}
-              <li className="list-group-item">Birthday: {Date(item.birthday)} </li>
+              <li className="list-group-item">Birthday: <Moment format="LL" date={new Date(item.birthday)}/></li>
               <li className="list-group-item">Address: {item.address} </li>
               <li className="list-group-item">Hobbies: {item.hobbies.join(", ")}</li>
             </ul>
