@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const moment = require("moment");
 //users model
 const User = require("../../models/User");
+const auth = require("../../middleware/auth");
 
 const func = {
   checkCors: router.use(function(req, res, next) {
@@ -30,7 +30,7 @@ const func = {
   }),
 
   //Add new User
-  postUser: router.post("/", (req, res) => {
+  postUser: router.post("/", auth, (req, res) => {
     const newUser = new User({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
@@ -42,7 +42,7 @@ const func = {
   }),
 
   //Delete a User
-  delUser: router.delete("/:id", (req, res) => {
+  delUser: router.delete("/:id", auth, (req, res) => {
     User.findById(req.params.id)
       .then(item =>
         item.remove().then(() => res.json({ success: true, id: req.params.id }))
@@ -51,7 +51,7 @@ const func = {
   }),
 
   //Update a user
-  putUser: router.put("/:id", (req, res) => {
+  putUser: router.put("/:id", auth, (req, res) => {
     User.findByIdAndUpdate(
       { _id: req.params.id },
       {

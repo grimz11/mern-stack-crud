@@ -1,16 +1,17 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
+// const bodyParser = require("body-parser");
 const path = require("path");
-const users = require("./routes/api/users");
+const config = require("config");
 
 const app = express();
 
 //bodyparser middleware
-app.use(bodyParser.json());
+app.use(express.json());
 
 //mongoo db-uri
-const db = require("./config/keys").mongoURI;
+// const db = require("./config/keys").mongoURI;
+const db = config.get("mongoURI");
 
 //connect to mongo db
 mongoose
@@ -19,7 +20,9 @@ mongoose
   .catch(err => console.log(err));
 
 //use routes
-app.use("/api/users", users);
+app.use("/api/users", require("./routes/api/users"));
+app.use("/api/user-auth", require("./routes/api/userAuthRegister"));
+app.use("/api/auth", require("./routes/api/auth"));
 
 // serve static asset if in production
 if (process.env.NODE_ENV === "production") {

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1579254006089" clover="3.2.0">
-  <project timestamp="1579254006090" name="All files">
-    <metrics statements="33" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="17" coveredmethods="2" elements="50" coveredelements="16" complexity="0" loc="33" ncloc="33" packages="3" files="3" classes="3"/>
+<coverage generated="1579482986330" clover="3.2.0">
+  <project timestamp="1579482986330" name="All files">
+    <metrics statements="31" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="17" coveredmethods="2" elements="48" coveredelements="15" complexity="0" loc="31" ncloc="31" packages="3" files="3" classes="3"/>
     <package name="models">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="User.js" path="/home/hsiuser2020/Desktop/mern-crud/models/User.js">
@@ -13,35 +13,33 @@
       </file>
     </package>
     <package name="routes.api">
-      <metrics statements="26" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="16" coveredmethods="1"/>
+      <metrics statements="24" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="16" coveredmethods="1"/>
       <file name="users.js" path="/home/hsiuser2020/Desktop/mern-crud/routes/api/users.js">
-        <metrics statements="26" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="16" coveredmethods="1"/>
+        <metrics statements="24" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="16" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
         <line num="28" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
         <line num="47" count="0" type="stmt"/>
         <line num="49" count="0" type="stmt"/>
-        <line num="51" count="0" type="stmt"/>
-        <line num="56" count="0" type="stmt"/>
-        <line num="69" count="0" type="stmt"/>
-        <line num="70" count="0" type="stmt"/>
-        <line num="74" count="1" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
       </file>
     </package>
     <package name="spec">

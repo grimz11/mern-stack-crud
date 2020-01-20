@@ -1,5 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
+import Register from '../auth/register';
+
 const  NavBar = () => {
   return (
     <div>
@@ -14,9 +16,13 @@ const  NavBar = () => {
             <li className="nav-item">
               <Link to="/add" className="nav-link"><i className="fas fa-plus"></i> Add</Link>
             </li>
-            {/* <li className="nav-item">
-              <Link to="/about" className="nav-link"><i className="fas fa-question"></i> About</Link>
+            {/* <li className="nav-item ml-3">
+              <Register buttonLabel="Login"/>
             </li> */}
+            <li className="nav-item ml-2">
+              <Register buttonLabel="Register"/>
+            </li>
+
           </ul>
         </div>
       </div>
